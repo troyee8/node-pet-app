@@ -1,15 +1,16 @@
 # coding-node
-This is a repository for applicants to the Network Software team to submit coding tasks for review.
+This is a repository for applicants to the Network Software submit coding exercises for review.
 
 ## Getting Started:
 Built for Node Version: 12.x
 
-1. Clone this repository.
-2. `npm install` within project folder to install dependencies.
-3. `npm run tests` to run sample unit tests.
+1. Create a fork of this repository.
+2. Clone fork
+3. `npm install` within project folder to install dependencies.
+4. `npm run tests` to run sample unit tests.
 
 ## Doing the test:
-4. Create your own branch from master`git checkout -b application/{yourname}`.
-5. Do requested changes.
-6. Commit your changes.
-7. Push changes.
+1. Do requested changes.
+2. Commit your changes.
+3. Push changes.
+4. Submit a pull request with your updates to this project
