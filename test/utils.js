@@ -11,7 +11,7 @@ const mongod = new MongoMemoryServer({
 
 const setup = async () => {
   await mongod.start();
-  if (mongod.instanceInfoSync?.port !== port) {
+  if (mongod.instanceInfoSync.port !== port) {
     throw new Error(`Failed to startup, :${port} already in use`);
   }
   await mongoose.connect(`mongodb://localhost/test`,
