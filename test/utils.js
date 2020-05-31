@@ -14,13 +14,17 @@ const setup = async () => {
   if (mongod.instanceInfoSync.port !== port) {
     throw new Error(`Failed to startup, :${port} already in use`);
   }
-  await mongoose.connect(`mongodb://localhost/test`,
+  await mongoose.connect(`mongodb://localhost/pets`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
+  }, (err) => {
+    if(! err) {
+      console.log("Server has been connected to mongodb");
+    }
   });
 };
 
 before(async () => {
-  await setup();
+  return await setup();
 });
