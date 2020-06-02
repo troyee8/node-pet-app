@@ -12,7 +12,6 @@ const router = express.Router();
  */
 router.post('/',
   validateBody(Joi.object().keys({
-    _id: Joi.required().description('Pet id'),
     name: Joi.string().required().description('Pet name'),
     age: Joi.number().integer().required().description('Pet age'),
     colour: Joi.string().required().description('Pet colour'),

@@ -1,5 +1,5 @@
 {
-  "name": "coding-node",
+  "name": "node-pet-app",
   "version": "0.0.1",
   "description": "Skeleton project for nodejs based coding interviews",
   "main": "app.js",
