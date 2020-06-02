@@ -96,7 +96,7 @@ describe('functional - pet', () => {
     expect(result.status).to.equal(200);
     expect(result.body.name).to.equal(pet.name);
 
-    // Fetch by id
+    // Fetch by wrong id
     const petId = 'test';
     const res = await request(app).get('/pets/'+petId).send();
     expect(res.status).to.equal(500);
@@ -139,7 +139,7 @@ describe('functional - pet', () => {
     expect(result.status).to.equal(200);
     expect(result.body.name).to.equal(pet.name);
 
-    // Fetch by wrong id
+    // delete by wrong id
     const id = 'test';
     const res = await request(app).delete('/pets/'+id).send();
     expect(res.status).to.equal(500);
@@ -159,7 +159,7 @@ describe('functional - pet', () => {
     expect(result.status).to.equal(200);
     expect(result.body.name).to.equal(pet.name);
 
-    // Fetch by wrong id
+    // delete by valid id
     const petId = result.body._id;
     const res = await request(app).delete('/pets/'+petId).send();
     expect(res.status).to.equal(200);
